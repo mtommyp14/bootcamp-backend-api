@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
+const colors = require('colors');
 const connectDB = require('./config/db');
 
 //Env
@@ -26,12 +27,12 @@ app.use('/api/v1/bootcamp', bootcamp);
 const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, () => {
-  console.log(`Server Running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+  console.log(`Server Running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold);
 });
 
-//Hadle Error
+//Haddle Error
 process.on('unhandledRejection', (err, promise) => {
-  console.log(`Error: ${err.massage}`);
+  console.log(`Error: ${err.message}`.red);
   //Close Sever & Exir Process
   server.close(() => process.exit(1));
 });

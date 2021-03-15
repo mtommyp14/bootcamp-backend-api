@@ -12,7 +12,8 @@ exports.getBootcamps =  (req, res, next) =>{
 exports.getBootcamp =  (req, res, next) =>{
     res.status(200).json({ success: true, msg: `Get Bootcamps ${req.params.id}`});
    
-    
+
+
 }
 
 // Desc     Create New Bootcamps
