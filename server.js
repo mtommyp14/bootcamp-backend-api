@@ -15,6 +15,9 @@ const bootcamp = require('./routes/bootcamp');
 //connect framework
 const app = express();
 
+//Body Parser
+app.use(express.json());
+
 //Connect MongoDB
 connectDB();
 
