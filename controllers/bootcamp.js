@@ -1,3 +1,5 @@
+const Bootcamp = require('../models/Bootcamp')
+
 // Desc     Get All Bootcamps
 // Router   GET /api/v1/bootcamp
 // Access   Public
